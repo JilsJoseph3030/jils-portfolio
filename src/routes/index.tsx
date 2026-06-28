@@ -8,9 +8,15 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Jils Joseph — Engineering Precision in the Silicon Age" },
-      { name: "description", content: "B.Tech ER student. Hardware-software co-design, embedded systems, React." },
+      {
+        name: "description",
+        content: "B.Tech ER student. Hardware-software co-design, embedded systems, React.",
+      },
       { property: "og:title", content: "Jils Joseph — Engineering Precision" },
-      { property: "og:description", content: "ER portfolio: hardware-software co-design, embedded systems, React." },
+      {
+        property: "og:description",
+        content: "ER portfolio: hardware-software co-design, embedded systems, React.",
+      },
     ],
   }),
   component: Index,
@@ -30,9 +36,7 @@ function Index() {
         <div className="text-accent-lime">
           jils_joseph@sjcet:~$ <span className="text-on-surface">whoami</span>
         </div>
-        <div className="text-on-surface-variant mt-1">
-          Jils Joseph: B.Tech ER Student
-        </div>
+        <div className="text-on-surface-variant mt-1">Jils Joseph: B.Tech ER Student</div>
       </div>
 
       {/* Hero */}
@@ -41,8 +45,8 @@ function Index() {
       </h1>
 
       <p className="mt-5 text-on-surface-variant text-base md:text-lg max-w-2xl leading-relaxed">
-        Electronics &amp; Computer Engineering @ SJCET, Palai. Specializing in
-        hardware-software co-design, embedded systems, and digital logic.
+        Electronics &amp; Computer Engineering @ SJCET, Palai. Specializing in hardware-software
+        co-design, embedded systems, and digital logic.
       </p>
 
       {/* CTAs */}

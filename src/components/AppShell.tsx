@@ -9,13 +9,7 @@ const NAV = [
   { to: "/connect", label: "LINK", icon: Sparkles },
 ] as const;
 
-export function AppShell({
-  breadcrumb,
-  children,
-}: {
-  breadcrumb: string;
-  children: ReactNode;
-}) {
+export function AppShell({ breadcrumb, children }: { breadcrumb: string; children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
@@ -33,9 +27,7 @@ export function AppShell({
         </div>
       </header>
 
-      <main className="flex-1 max-w-5xl w-full mx-auto px-5 md:px-10 pt-6 pb-32">
-        {children}
-      </main>
+      <main className="flex-1 max-w-5xl w-full mx-auto px-5 md:px-10 pt-6 pb-32">{children}</main>
 
       {/* Footer */}
       <footer className="border-t border-outline-variant py-8 pb-28 text-center">
@@ -44,8 +36,22 @@ export function AppShell({
           © 2026 JILS_JOSEPH // BUILD_REV_2.0.4
         </div>
         <div className="mt-3 flex justify-center gap-6 label-caps">
-          <a href="https://github.com/JilsJoseph3030" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary-dim underline-offset-4 hover:underline">GITHUB</a>
-          <a href="https://www.linkedin.com/in/jils-joseph-baba6932b" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary-dim underline-offset-4 hover:underline">LINKEDIN</a>
+          <a
+            href="https://github.com/JilsJoseph3030"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-on-surface-variant hover:text-primary-dim underline-offset-4 hover:underline"
+          >
+            GITHUB
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jils-joseph-baba6932b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-on-surface-variant hover:text-primary-dim underline-offset-4 hover:underline"
+          >
+            LINKEDIN
+          </a>
         </div>
       </footer>
 
@@ -95,13 +101,7 @@ export function SectionLabel({ children }: { children: ReactNode }) {
   );
 }
 
-export function Card({
-  children,
-  className = "",
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <div
       className={`bg-surface-container border border-outline-variant rounded-lg p-5 ${className}`}
