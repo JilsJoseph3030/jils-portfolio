@@ -70,16 +70,22 @@
 }
 
 @layer base {
-  * { border-color: var(--color-outline-variant); }
+  * {
+    border-color: var(--color-outline-variant);
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    background-image:
-      radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 24px 24px;
   }
-  h1,h2,h3,h4 { font-family: var(--font-display); }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
 }
 
 @utility label-caps {
@@ -106,16 +112,27 @@
 }
 
 @keyframes blink {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 @utility cursor-blink {
   animation: blink 1s steps(2) infinite;
 }
 
 @keyframes pulsePip {
-  0%,100% { box-shadow: 0 0 0 0 rgb(195 244 0 / 0.6); }
-  50% { box-shadow: 0 0 0 6px rgb(195 244 0 / 0); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(195 244 0 / 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgb(195 244 0 / 0);
+  }
 }
 @utility pip-pulse {
   animation: pulsePip 1.8s ease-out infinite;

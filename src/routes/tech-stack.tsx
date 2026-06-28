@@ -7,7 +7,10 @@ export const Route = createFileRoute("/tech-stack")({
   head: () => ({
     meta: [
       { title: "Tech Stack // Jils Joseph" },
-      { name: "description", content: "Core competencies across hardware, embedded systems, and software." },
+      {
+        name: "description",
+        content: "Core competencies across hardware, embedded systems, and software.",
+      },
       { property: "og:title", content: "Tech Stack // Jils Joseph" },
       { property: "og:description", content: "Core competencies: hardware, embedded, software." },
     ],
@@ -44,9 +47,7 @@ function TechPage() {
   return (
     <AppShell breadcrumb="jils_joseph / root / tech-stack">
       <SectionLabel>L02_01 // SYSTEM_INFO</SectionLabel>
-      <h1 className="font-display font-bold text-4xl md:text-5xl">
-        Tech Stack // Jils Joseph
-      </h1>
+      <h1 className="font-display font-bold text-4xl md:text-5xl">Tech Stack // Jils Joseph</h1>
 
       <Card className="mt-6">
         <p className="font-mono text-sm text-on-surface italic">
@@ -73,9 +74,7 @@ function TechPage() {
             {langs.map((l) => (
               <div key={l.name}>
                 <div className="text-accent-lime text-sm">{l.pct}</div>
-                <div className="font-display text-2xl font-bold text-on-surface">
-                  {l.name}
-                </div>
+                <div className="font-display text-2xl font-bold text-on-surface">{l.name}</div>
                 <div className="text-xs text-on-surface-variant mt-0.5">{l.note}</div>
               </div>
             ))}
@@ -127,7 +126,9 @@ function TerminalInput() {
         placeholder="awaiting_input..."
         className="flex-1 bg-transparent outline-none text-on-surface placeholder:text-on-surface-variant"
       />
-      <span className={`inline-block w-2 h-4 bg-accent-lime ${phase % 2 ? "opacity-100" : "opacity-0"}`} />
+      <span
+        className={`inline-block w-2 h-4 bg-accent-lime ${phase % 2 ? "opacity-100" : "opacity-0"}`}
+      />
     </div>
   );
 }

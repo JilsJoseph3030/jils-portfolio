@@ -8,14 +8,11 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
 
-
-
 function NotFoundComponent() {
-
-
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
@@ -46,7 +43,6 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="font-display text-xl font-semibold">Runtime fault detected</h1>
@@ -81,7 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Jils Joseph — Engineering Precision in the Silicon Age" },
-      { name: "description", content: "Portfolio of Jils Joseph: B.Tech Electronics & Computer Engineering student at SJCET Palai. Hardware-software co-design, embedded systems, digital logic." },
+      {
+        name: "description",
+        content:
+          "Portfolio of Jils Joseph: B.Tech Electronics & Computer Engineering student at SJCET Palai. Hardware-software co-design, embedded systems, digital logic.",
+      },
       { property: "og:title", content: "Jils Joseph — Engineering Precision" },
       { property: "og:description", content: "Electronics & Computer Engineering portfolio." },
       { property: "og:type", content: "website" },
@@ -111,6 +111,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <Analytics />
         <Scripts />
       </body>
     </html>

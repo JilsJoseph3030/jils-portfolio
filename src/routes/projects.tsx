@@ -7,7 +7,10 @@ export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
       { title: "Projects // Jils Joseph" },
-      { name: "description", content: "Selected hardware & software projects: dashboards, IoT, embedded systems." },
+      {
+        name: "description",
+        content: "Selected hardware & software projects: dashboards, IoT, embedded systems.",
+      },
       { property: "og:title", content: "Projects // Jils Joseph" },
       { property: "og:description", content: "Selected hardware & software projects." },
     ],
@@ -16,8 +19,16 @@ export const Route = createFileRoute("/projects")({
 });
 
 const small = [
-  { name: "TacTacToe", desc: "Minimax-driven AI opponent with logical tree pruning.", tags: ["JS", "AI"] },
-  { name: "BobFever", desc: "Schema-based fever-tracking with telemetry plots.", tags: ["VUE", "API"] },
+  {
+    name: "TacTacToe",
+    desc: "Minimax-driven AI opponent with logical tree pruning.",
+    tags: ["JS", "AI"],
+  },
+  {
+    name: "BobFever",
+    desc: "Schema-based fever-tracking with telemetry plots.",
+    tags: ["VUE", "API"],
+  },
 ];
 
 function ProjectsPage() {
@@ -32,16 +43,28 @@ function ProjectsPage() {
           <span className="label-caps text-accent-lime">FEATURED_001</span>
           <span className="code-sm text-on-surface-variant">{"</>"}</span>
         </div>
-        <img src={hardwareViz} alt="Dashboard" width={1024} height={400} loading="lazy" className="w-full h-44 md:h-56 object-cover" />
+        <img
+          src={hardwareViz}
+          alt="Dashboard"
+          width={1024}
+          height={400}
+          loading="lazy"
+          className="w-full h-44 md:h-56 object-cover"
+        />
         <div className="p-5">
           <h2 className="font-display text-xl font-semibold">Student Dashboard Portal</h2>
           <p className="mt-2 text-on-surface-variant text-sm leading-relaxed">
-            Integrated management system for academic tracking, featuring
-            real-time data synchronization and modular widgets.
+            Integrated management system for academic tracking, featuring real-time data
+            synchronization and modular widgets.
           </p>
           <div className="flex flex-wrap gap-2 mt-4">
             {["REACT", "TYPESCRIPT", "SUPABASE", "WEBSOCKET"].map((t) => (
-              <span key={t} className="code-sm px-2 py-1 rounded-sm bg-surface-low text-primary-dim">{t}</span>
+              <span
+                key={t}
+                className="code-sm px-2 py-1 rounded-sm bg-surface-low text-primary-dim"
+              >
+                {t}
+              </span>
             ))}
           </div>
         </div>
@@ -58,7 +81,12 @@ function ProjectsPage() {
             <p className="mt-2 text-sm text-on-surface-variant">{p.desc}</p>
             <div className="flex gap-2 mt-3">
               {p.tags.map((t) => (
-                <span key={t} className="code-sm px-2 py-0.5 rounded-sm bg-surface-low text-primary-dim">{t}</span>
+                <span
+                  key={t}
+                  className="code-sm px-2 py-0.5 rounded-sm bg-surface-low text-primary-dim"
+                >
+                  {t}
+                </span>
               ))}
             </div>
           </Card>

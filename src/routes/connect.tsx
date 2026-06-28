@@ -9,9 +9,16 @@ export const Route = createFileRoute("/connect")({
   head: () => ({
     meta: [
       { title: "Connect // Jils Joseph" },
-      { name: "description", content: "Open a contact channel — collaborations, internships, and engineering conversations welcome." },
+      {
+        name: "description",
+        content:
+          "Open a contact channel — collaborations, internships, and engineering conversations welcome.",
+      },
       { property: "og:title", content: "Connect // Jils Joseph" },
-      { property: "og:description", content: "Initiate contact: collaborations and engineering conversations." },
+      {
+        property: "og:description",
+        content: "Initiate contact: collaborations and engineering conversations.",
+      },
     ],
   }),
   component: ConnectPage,
@@ -25,9 +32,7 @@ function ConnectPage() {
 
   return (
     <AppShell breadcrumb="jils_joseph / root / connect">
-      <div className="label-caps text-on-surface-variant">
-        ROOT / LOG_03: CONNECT_CHANNEL
-      </div>
+      <div className="label-caps text-on-surface-variant">ROOT / LOG_03: CONNECT_CHANNEL</div>
       <h1 className="font-display font-bold text-4xl md:text-5xl text-accent-lime mt-3">
         Connect // Jils Joseph
       </h1>
@@ -55,7 +60,13 @@ function ConnectPage() {
               <TerminalField value={name} onChange={setName} placeholder="Your name" />
             </Field>
             <Field label="[RETURN_PATH]">
-              <TerminalField value={email} onChange={setEmail} placeholder="Email address" type="email" required />
+              <TerminalField
+                value={email}
+                onChange={setEmail}
+                placeholder="Email address"
+                type="email"
+                required
+              />
             </Field>
             <Field label="[DATA_PAYLOAD]">
               <textarea
@@ -80,7 +91,11 @@ function ConnectPage() {
       <div className="mt-4 grid grid-cols-3 gap-3">
         {[
           { icon: Github, label: "GITHUB", href: "https://github.com/JilsJoseph3030" },
-          { icon: Linkedin, label: "LINKEDIN", href: "https://www.linkedin.com/in/jils-joseph-baba6932b" },
+          {
+            icon: Linkedin,
+            label: "LINKEDIN",
+            href: "https://www.linkedin.com/in/jils-joseph-baba6932b",
+          },
           { icon: Mail, label: "EMAIL", href: "mailto:" },
         ].map((s) => {
           const Icon = s.icon;
@@ -106,7 +121,7 @@ function ConnectPage() {
             {"// Machine-readable profile for LLM parsing and automated recruitment systems."}
           </p>
           <pre className="mt-4 p-3 bg-surface-low border border-outline-variant code-sm text-primary-dim overflow-x-auto">
-{`{
+            {`{
   "agent": "JILS_JOSEPH",
   "role": "EE_STUDENT",
   "stack": ["C++", "REACT", "\\n"],
@@ -125,7 +140,14 @@ function ConnectPage() {
       </div>
 
       <div className="mt-6 rounded-lg overflow-hidden border border-outline-variant">
-        <img src={hardwareViz} alt="Circuit board" width={1024} height={400} loading="lazy" className="w-full h-48 object-cover grayscale" />
+        <img
+          src={hardwareViz}
+          alt="Circuit board"
+          width={1024}
+          height={400}
+          loading="lazy"
+          className="w-full h-48 object-cover grayscale"
+        />
       </div>
     </AppShell>
   );
